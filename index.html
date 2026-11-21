@@ -1333,7 +1333,7 @@
               </div>
               <div class="hero-spec-cell">
                 <div class="spec-val">40</div>
-                <div class="spec-lbl">LANGUAGES / 45選択肢</div>
+                <div class="spec-lbl">LANGUAGES / 50選択肢</div>
               </div>
               <div class="hero-spec-cell">
                 <div class="spec-val">OFFLINE</div>
@@ -1359,7 +1359,7 @@
 
       <!-- DEPARTURE TICKER BAND -->
       <div class="ticker-band" aria-label="40 Languages Departure Ticker">
-        <div class="ticker-tag">JP → 45 STATIONS</div>
+        <div class="ticker-tag">JP → 50 STATIONS</div>
         <div class="ticker-viewport">
           <div class="ticker-track" id="tickerTrack"></div>
         </div>
@@ -1720,7 +1720,7 @@
                 <text x="24" y="79" font-size="10">JP →</text>
                 <line x1="58" y1="75" x2="94" y2="75" class="ink-stroke"/>
               </svg>
-              <div class="guide-cap-ja">全40言語・45選択肢から翻訳先をワンタップ切替</div>
+              <div class="guide-cap-ja">全40言語・50選択肢から翻訳先をワンタップ切替</div>
             </article>
 
             <!-- Panel 6 -->
@@ -1752,16 +1752,16 @@
             <span class="section-num">04</span>
             <h2 class="section-title">LANGUAGES</h2>
           </div>
-          <div class="section-meta">40 LANGUAGES · 45 STATIONS / 対応言語一覧</div>
+          <div class="section-meta">40 LANGUAGES · 50 STATIONS / 対応言語一覧</div>
         </div>
 
         <div class="section-body">
           <div class="lang-board-note">
             <div class="lang-board-en">Every supported locale is indexed as a destination station from Japanese.</div>
-            <div class="lang-board-ja">日本語から世界40言語・45の地域バリエーションへ接続する駅ナンバリングボード</div>
+            <div class="lang-board-ja">日本語から世界40言語・50の地域バリエーションへ接続する駅ナンバリングボード</div>
           </div>
 
-          <div class="station-lang-grid" id="stationLangGrid" aria-label="45 Supported Language Stations"></div>
+          <div class="station-lang-grid" id="stationLangGrid" aria-label="50 Supported Language Stations"></div>
 
           <table class="spec-table" aria-label="Application Specifications">
             <tbody>
@@ -1779,7 +1779,7 @@
               </tr>
               <tr>
                 <th>TRANSLATION</th>
-                <td>40 Languages · 45 Locales · Google ML Kit On-Device Offline</td>
+                <td>40 Languages · 50 Locales · Google ML Kit On-Device Offline</td>
               </tr>
               <tr>
                 <th>PRICE</th>
@@ -1910,15 +1910,20 @@
       'use strict';
 
       /* ---------------------------------------------------------
-         1. 45 LANGUAGE STATIONS DATA (Synced with languages.json)
+         1. 50 LANGUAGE STATIONS DATA (Synced with languages.json)
          --------------------------------------------------------- */
       const STATIONS = [
         { code: 'en-US', label: 'English · US' },
         { code: 'en-GB', label: 'English · UK' },
         { code: 'en-AU', label: 'English · Australia' },
+        { code: 'en-CA', label: 'English · Canada' },
+        { code: 'en-IN', label: 'English · India' },
+        { code: 'en-SG', label: 'English · Singapore' },
+        { code: 'en-ZA', label: 'English · South Africa' },
         { code: 'ja',    label: '日本語' },
         { code: 'es-ES', label: 'Español · España' },
         { code: 'es-419',label: 'Español · Latinoamérica' },
+        { code: 'es-US', label: 'Español · US' },
         { code: 'pt-PT', label: 'Português · Portugal' },
         { code: 'pt-BR', label: 'Português · Brasil' },
         { code: 'fr-FR', label: 'Français · France' },
@@ -1969,7 +1974,7 @@
         tickerTrack.innerHTML = buildTickerHtml() + buildTickerHtml();
       }
 
-      // Render 45 Stations Board
+      // Render 50 Stations Board
       const langGrid = document.getElementById('stationLangGrid');
       if (langGrid) {
         langGrid.innerHTML = STATIONS.map((s, idx) => {
