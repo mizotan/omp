@@ -224,6 +224,14 @@
       background: var(--ink-main);
       color: #FFFFFF;
     }
+    .rail-link.rail-link-accent {
+      background: var(--picto-soft);
+      color: var(--picto-blue);
+    }
+    .rail-link.rail-link-accent:hover {
+      background: var(--rec-red);
+      color: #FFFFFF;
+    }
     .rail-num {
       font-family: var(--font-mono);
       font-size: 11px;
@@ -412,7 +420,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
     }
     .status-plate {
       display: inline-flex;
@@ -424,7 +432,7 @@
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.14em;
-      padding: 12px 20px;
+      padding: 12px 18px;
       border: var(--line-mid) solid var(--ink-main);
     }
     .status-dot {
@@ -433,7 +441,7 @@
       border-radius: 50%;
       background: var(--scope-wave);
     }
-    /* Google Play 公開時にコメント解除して使用するREC赤ボタン */
+    /* 最重要アクション用REC赤ボタン */
     .btn-play-red {
       display: inline-flex;
       align-items: center;
@@ -444,24 +452,63 @@
       font-family: var(--font-mono);
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.14em;
-      padding: 12px 22px;
+      letter-spacing: 0.12em;
+      padding: 12px 20px;
       border: var(--line-mid) solid var(--rec-red);
-      transition: background-color 0.15s ease;
+      transition: background-color 0.15s ease, border-color 0.15s ease;
     }
     .btn-play-red:hover {
       background: var(--rec-red-dark);
       border-color: var(--rec-red-dark);
+    }
+    .btn-station-blue {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--picto-blue);
+      color: #FFFFFF;
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 11px 18px;
+      border: var(--line-mid) solid var(--picto-blue);
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+    .btn-station-blue:hover {
+      background: var(--ink-main);
+      border-color: var(--ink-main);
+    }
+    .btn-station-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      color: var(--ink-main);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 11px 18px;
+      border: var(--line-mid) solid var(--ink-main);
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+    .btn-station-outline:hover {
+      background: var(--ink-main);
+      color: #FFFFFF;
     }
     .cta-note {
       font-family: var(--font-mono);
       font-size: 11px;
       color: var(--ink-muted);
       letter-spacing: 0.08em;
+      width: 100%;
     }
 
     /* =========================================================
-       DEPARTURE TICKER BAND (ALL 45 LANGUAGE STATIONS)
+       DEPARTURE TICKER BAND (ALL 50 LANGUAGE STATIONS)
        ========================================================= */
     .ticker-band {
       background: var(--bg-sub);
@@ -649,6 +696,153 @@
     }
 
     /* =========================================================
+       CLOSED TEST / PRE-RELEASE BOARDING PLATFORM
+       ========================================================= */
+    .test-board {
+      border: var(--line-bold) solid var(--ink-main);
+      background: var(--bg-card);
+    }
+    .test-board-head {
+      background: var(--picto-blue);
+      color: #FFFFFF;
+      padding: 14px 22px;
+      border-bottom: var(--line-mid) solid var(--ink-main);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .test-board-title {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+    }
+    .test-board-tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      background: #FFFFFF;
+      color: var(--picto-blue);
+      padding: 3px 10px;
+    }
+    .test-board-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+    }
+    .test-board-main {
+      padding: 24px;
+      border-right: var(--line-mid) solid var(--ink-main);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .test-lead-ja {
+      font-size: 14px;
+      color: var(--ink-main);
+      line-height: 1.7;
+    }
+    .test-lead-en {
+      font-size: 12px;
+      color: var(--ink-muted);
+      margin-top: 4px;
+    }
+    .test-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .test-step-row {
+      border: 1.5px solid var(--border-soft);
+      background: var(--bg-base);
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .test-step-header {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+    .test-step-badge {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      background: var(--ink-main);
+      color: #FFFFFF;
+      padding: 2px 8px;
+      flex-shrink: 0;
+    }
+    .test-step-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--ink-main);
+    }
+    .test-step-desc {
+      font-size: 12px;
+      color: var(--ink-muted);
+    }
+    .test-btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .test-qr-pane {
+      padding: 24px 20px;
+      background: var(--bg-sub);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 12px;
+    }
+    .test-qr-frame {
+      width: 162px;
+      height: 162px;
+      background: #FFFFFF;
+      border: var(--line-mid) solid var(--ink-main);
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .test-qr-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .test-qr-code {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--ink-main);
+    }
+    .test-qr-sub {
+      font-size: 11px;
+      color: var(--ink-muted);
+      line-height: 1.5;
+    }
+    .test-board-foot {
+      border-top: var(--line-mid) solid var(--ink-main);
+      background: var(--bg-base);
+      padding: 12px 22px;
+      font-size: 11px;
+      color: var(--ink-muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    /* =========================================================
        SECTION HEADER FRAME (GIANT TITLE SEATED ON BOLD RULE)
        ========================================================= */
     .station-section {
@@ -680,6 +874,9 @@
       color: #FFFFFF;
       padding: 4px 10px;
       letter-spacing: 0.12em;
+    }
+    .section-num.section-num-red {
+      background: var(--rec-red);
     }
     .section-title {
       font-size: clamp(26px, 4vw, 42px);
@@ -968,7 +1165,7 @@
     }
 
     /* =========================================================
-       04 40 LANGUAGES / 45 STATIONS BOARD
+       04 40 LANGUAGES / 50 STATIONS BOARD
        ========================================================= */
     .lang-board-note {
       display: flex;
@@ -1250,6 +1447,14 @@
       .demo-word-btn:nth-child(-n+2) {
         border-bottom: var(--line-mid) solid var(--ink-main);
       }
+      .test-board-grid {
+        grid-template-columns: 1fr;
+      }
+      .test-board-main {
+        border-right: none;
+        border-bottom: var(--line-mid) solid var(--ink-main);
+        padding: 18px;
+      }
       .overview-grid,
       .guide-grid,
       .station-lang-grid,
@@ -1344,14 +1549,17 @@
             <div class="hero-cta-row">
               <span class="status-plate">
                 <span class="status-dot" aria-hidden="true"></span>
-                <span>GOOGLE PLAY · COMING SOON</span>
+                <span>CLOSED TEST · NOW BOARDING</span>
               </span>
-              <!-- ★ストア公開時は以下のコメントアウトを解除してください
+              <a href="#closed-test" class="btn-play-red">
+                <span>▶ JOIN CLOSED TEST / 先行プレイに参加</span>
+              </a>
+              <!-- ★一般公開時は上の2要素を以下に差し替えてください
               <a href="https://play.google.com/store/apps/details?id=com.bonsai.omp" class="btn-play-red" target="_blank" rel="noopener noreferrer">
                 <span>▶ GET IT ON GOOGLE PLAY</span>
               </a>
               -->
-              <span class="cta-note">FREE ANDROID APP · AD-SUPPORTED · NO ACCOUNT REQUIRED</span>
+              <span class="cta-note">FREE ANDROID APP · AD-SUPPORTED · PRE-RELEASE TESTING OPEN</span>
             </div>
           </div>
         </div>
@@ -1404,6 +1612,89 @@
             <span class="dw-romaji">Kira-kira · SPARKLE</span>
             <span class="dw-sense">Bright twinkling light / 光のきらめき</span>
           </button>
+        </div>
+      </section>
+
+      <!-- =========================================================
+           00 CLOSED TEST (PRE-RELEASE BOARDING)
+           ========================================================= -->
+      <section class="station-section" id="closed-test">
+        <div class="section-head-band">
+          <div class="section-title-group">
+            <span class="section-num section-num-red">00</span>
+            <h2 class="section-title">CLOSED TEST</h2>
+          </div>
+          <div class="section-meta">PRE-RELEASE BOARDING / 先行プレイ（クローズドテスト）</div>
+        </div>
+
+        <div class="section-body">
+          <div class="test-board">
+            <div class="test-board-head">
+              <div class="test-board-title">TRIAL RUN PLATFORM · ANDROID CLOSED TESTING</div>
+              <div class="test-board-tag">FREE · ANYONE WELCOME</div>
+            </div>
+
+            <div class="test-board-grid">
+              <div class="test-board-main">
+                <div>
+                  <p class="test-lead-ja">
+                    Google Play 一般公開前の先行プレイ（クローズドテスト）にご協力いただける方を募集しています。専門知識は一切不要です。普段どおりスマホで触って遊んでいただくだけで大助かりです。
+                  </p>
+                  <p class="test-lead-en">
+                    Join our pre-release closed test on Android and try Onomatopoeia Station before public launch. Free to join, leave anytime.
+                  </p>
+                </div>
+
+                <div class="test-steps">
+                  <div class="test-step-row">
+                    <div class="test-step-header">
+                      <span class="test-step-badge">STEP 01</span>
+                      <span class="test-step-title">先行プレイ用 Google グループに参加する</span>
+                    </div>
+                    <p class="test-step-desc">
+                      Googleアカウントでログインしてグループに参加します（無料・いつでも退会できます）。 / Join our tester Google Group first.
+                    </p>
+                    <div class="test-btn-row">
+                      <a href="https://groups.google.com/g/bonsaiproject2026/about" class="btn-station-blue" target="_blank" rel="noopener noreferrer">
+                        <span>▶ STEP 1: Googleグループに参加する</span>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="test-step-row">
+                    <div class="test-step-header">
+                      <span class="test-step-badge">STEP 02</span>
+                      <span class="test-step-title">テスト参加URL または Google Play からインストール</span>
+                    </div>
+                    <p class="test-step-desc">
+                      グループ参加後、下のボタンまたは右のQRコードからアプリをダウンロードしてお試しください。 / Opt in on the web or open directly in Google Play.
+                    </p>
+                    <div class="test-btn-row">
+                      <a href="https://play.google.com/apps/testing/com.bonsai.omp" class="btn-play-red" target="_blank" rel="noopener noreferrer">
+                        <span>▶ 先行プレイ / クローズドテスト参加URL</span>
+                      </a>
+                      <a href="https://play.google.com/store/apps/details?id=com.bonsai.omp" class="btn-station-outline" target="_blank" rel="noopener noreferrer">
+                        <span>GOOGLE PLAY で開く ↗</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="test-qr-pane" id="testQrPane">
+                <div class="test-qr-frame">
+                  <img src="qr_omp.png" alt="Onomatopoeia Station クローズドテスト参加者スマホ用QRコード" onerror="document.getElementById('testQrPane').style.display='none';">
+                </div>
+                <div class="test-qr-code">SCAN FOR ANDROID</div>
+                <div class="test-qr-sub">参加者スマホ用QRコード<br>（Googleグループ参加後に読取）</div>
+              </div>
+            </div>
+
+            <div class="test-board-foot">
+              <span>※ 無料アプリ（広告支援型 / Ad-supported）です。広告配信・効果測定のため広告ID（AAID）を利用します。</span>
+              <span>PACKAGE: com.bonsai.omp</span>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1744,7 +2035,7 @@
       </section>
 
       <!-- =========================================================
-           04 40 LANGUAGES / 45 STATIONS BOARD
+           04 40 LANGUAGES / 50 STATIONS BOARD
            ========================================================= -->
       <section class="station-section" id="languages">
         <div class="section-head-band">
@@ -1866,8 +2157,12 @@
 
         <nav class="rail-nav">
           <a href="#top" class="rail-link">
+            <span class="rail-num">TOP</span>
+            <span class="rail-label">HOME</span>
+          </a>
+          <a href="#closed-test" class="rail-link rail-link-accent">
             <span class="rail-num">00</span>
-            <span class="rail-label">TOP</span>
+            <span class="rail-label">CLOSED TEST</span>
           </a>
           <a href="#overview" class="rail-link">
             <span class="rail-num">01</span>
